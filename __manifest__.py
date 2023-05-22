@@ -1,0 +1,20 @@
+{
+    'name': 'Module Laundry',
+    'version': '13.0.1.0.0',
+    'category': 'purchase',
+    'summary': 'Module Laundry',
+    'description': """ Ini adalah Module laundry_bagoes """,
+    'website': '',
+    'author': 'AutoDidak',
+    'depends': ['web','base'],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/laundry_bagoes_view.xml',
+        'views/laundry_bagoes_action.xml',
+        'views/laundry_bagoes_menuitem.xml',
+        'reports/laundry_bagoes_qweb.xml',
+    ],
+    'installable': True,
+    'application': True,
+    'license': 'OEEL-1',
+}

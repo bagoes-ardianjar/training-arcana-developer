@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="pelanggan_laundry_tree_view_id" model="ir.ui.view">
+            <field name="name">pelanggan_laundry_tree_view_id</field>
+            <field name="model">pelanggan.laundry</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="hp"/>
+                    <field name="alamat"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="pelanggan_laundry_form_view_id" model="ir.ui.view">
+            <field name="name">pelanggan_laundryk_form_view_id</field>
+            <field name="model">pelanggan.laundry</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="hp"/>
+                            <field name="alamat"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="transaksi_laundry_tree_view_id" model="ir.ui.view">
+            <field name="name">transaksi_laundry_tree_view_id</field>
+            <field name="model">transaksi.laundry</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="tanggal_masuk"/>
+                    <field name="nama_pelanggan"/>
+                    <field name="berat"/>
+                    <field name="tanggal_selesai"/>
+                    <field name="harga"/>
+                    <field name="status"/>
+                    <button name="func_invoice" string="Invoice" class="oe_highlight" type="object"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="transaksi_laundry_form_view_id" model="ir.ui.view">
+            <field name="name">transaksi_laundry_form_view_id</field>
+            <field name="model">transaksi.laundry</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="tanggal_masuk"/>
+                            <field name="nama_pelanggan"/>
+                            <field name="berat"/>
+                            <field name="tanggal_selesai"/>
+                            <field name="harga"/>
+                            <field name="status"/>
+                        </group>
+                        <notebook>
+                            <page string="Daftar Pakaian">
+                                <field name="transaksi_laundry_ids" nolabel="1" options="{'reload_on_button': True}">
+                                    <tree edit="true" create="true" editable="bottom" delete="true">
+                                        <field name="jenis_pakaian"/>
+                                        <field name="jumlah"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+<!--        <record id="laporan_laundry_tree_view_id" model="ir.ui.view">-->
+<!--            <field name="name">laporan_laundry_tree_view_id</field>-->
+<!--            <field name="model">laporan.laundry</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <tree>-->
+<!--                    <field name="dari_tanggal"/>-->
+<!--                    <field name="sampai_tanggal"/>-->
+<!--                </tree>-->
+<!--            </field>-->
+<!--        </record>-->
+
+        <record id="laporan_laundry_form_view_id" model="ir.ui.view">
+            <field name="name">laporan_laundry_form_view_id</field>
+            <field name="model">laporan.laundry</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="dari_tanggal"/>
+                            </group>
+                            <group>
+                                <div class="o_row">
+                                    <field name="sampai_tanggal"/>
+                                    <button name="func_filter" string="filter" type="object" class="oe_stat_button" icon="fa-archive"/>
+                                </div>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Daftar Laporan">
+                                <field name="laporan_laundry_ids" nolabel="1" options="{'reload_on_button': True}">
+                                    <tree edit="true" editable="bottom" delete="true">
+                                        <field name="nomor_laporan"/>
+                                        <field name="nomor_invoice"/>
+                                        <field name="tanggal_masuk"/>
+                                        <field name="nama_pelanggan"/>
+                                        <field name="berat"/>
+                                        <field name="tanggal_selesai"/>
+                                        <field name="harga"/>
+                                        <field name="status"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="invoice_laundry_form_id" model="ir.ui.view">
+            <field name="name">invoice_laundry_form_id</field>
+            <field name="model">invoice.laundry</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="nomor_invoice"/>
+                        </group>
+                        <group>
+                            <field name="tanggal_masuk"/>
+                        </group>
+                        <group>
+                            <field name="nama_pelanggan"/>
+                        </group>
+                        <group>
+                            <field name="hp"/>
+                        </group>
+                        <group>
+                            <field name="alamat"/>
+                        </group>
+                        <group>
+                            <field name="berat"/>
+                        </group>
+                        <group>
+                            <field name="tanggal_selesai"/>
+                        </group>
+                        <group>
+                            <field name="status"/>
+                        </group>
+                        <group>
+                            <field name="harga"/>
+                        </group>
+                        <notebook>
+                            <page string="Daftar Pakaian">
+                                <field name="invoice_laundry_ids" nolabel="1" options="{'reload_on_button': True}">
+                                    <tree edit="true" editable="bottom" delete="true">
+                                        <field name="jenis_pakaian"/>
+                                        <field name="jumlah"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+<!--        <record id="password_laundry_form_view_id" model="ir.ui.view">-->
+<!--            <field name="name">password_laundry_form_id</field>-->
+<!--            <field name="model">password.laundry</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form>-->
+<!--                    <sheet>-->
+<!--                        <group>-->
+<!--                            <field password="password"/>-->
+<!--                        </group>-->
+<!--                    </sheet>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+    </data>
+</odoo>

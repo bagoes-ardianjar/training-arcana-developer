@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="pelanggan_laundry_actions_id" model="ir.actions.act_window">
+        <field name="name">Pelanggan</field>
+        <field name="res_model">pelanggan.laundry</field>
+    </record>
+
+    <record id="pelanggan_laundry_actions_tree_view_id" model="ir.actions.act_window.view">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="laundry_bagoes.pelanggan_laundry_tree_view_id"/>
+        <field name="act_window_id" ref="laundry_bagoes.pelanggan_laundry_actions_id"/>
+    </record>
+
+    <record id="pelanggan_laundry_form_view_id" model="ir.actions.act_window.view">
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="laundry_bagoes.pelanggan_laundry_form_view_id"/>
+        <field name="act_window_id" ref="laundry_bagoes.pelanggan_laundry_actions_id"/>
+    </record>
+
+    <record id="transaksi_laundry_actions_id" model="ir.actions.act_window">
+        <field name="name">Transaksi</field>
+        <field name="res_model">transaksi.laundry</field>
+    </record>
+
+    <record id="transaksi_laundry_actions_tree_view_id" model="ir.actions.act_window.view">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="laundry_bagoes.transaksi_laundry_tree_view_id"/>
+        <field name="act_window_id" ref="laundry_bagoes.transaksi_laundry_actions_id"/>
+    </record>
+
+    <record id="transaksi_laundry_form_view_id" model="ir.actions.act_window.view">
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="laundry_bagoes.transaksi_laundry_form_view_id"/>
+        <field name="act_window_id" ref="laundry_bagoes.transaksi_laundry_actions_id"/>
+    </record>
+
+    <record id="laporan_laundry_actions_id" model="ir.actions.act_window">
+        <field name="name">Laporan</field>
+        <field name="res_model">laporan.laundry</field>
+    </record>
+
+<!--    <record id="laporan_laundry_actions_tree_view_id" model="ir.actions.act_window.view">-->
+<!--        <field name="sequence" eval="1"/>-->
+<!--        <field name="view_mode">tree</field>-->
+<!--        <field name="view_id" ref="laundry_bagoes.laporan_laundry_tree_view_id"/>-->
+<!--        <field name="act_window_id" ref="laundry_bagoes.laporan_laundry_actions_id"/>-->
+<!--    </record>-->
+
+    <record id="laporan_laundry_form_view_id" model="ir.actions.act_window.view">
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="laundry_bagoes.laporan_laundry_form_view_id"/>
+        <field name="act_window_id" ref="laundry_bagoes.laporan_laundry_actions_id"/>
+    </record>
+
+<!--    <record id="password_laundry_actions_id" model="ir.actions.act_window">-->
+<!--        <field name="sequence" eval="3"/>-->
+<!--        <field name="view_mode">form</field>-->
+<!--        <field name="view_id" ref="laundry_bagoes.password_laundry_form_view_id"/>-->
+<!--        <field name="act_window_id" ref="laundry_bagoes.password_laundry_actions_id"/>-->
+<!--    </record>-->
+</odoo>

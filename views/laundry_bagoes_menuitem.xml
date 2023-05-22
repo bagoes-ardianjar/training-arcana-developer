@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem
+        id="parent_bagoes_laundry_id"
+        name="Bagoes Laundry"
+        sequence="1"/>
+        <menuitem
+            id="child_pelanggan_laundry_id"
+            name="Pelanggan"
+            sequence="2"
+            parent="laundry_bagoes.parent_bagoes_laundry_id"
+            action="laundry_bagoes.pelanggan_laundry_actions_id"/>
+        <menuitem
+            id="child_transaksi_laundry_id"
+            name="Transaksi"
+            sequence="5"
+            parent="laundry_bagoes.parent_bagoes_laundry_id"
+            action="laundry_bagoes.transaksi_laundry_actions_id"/>
+        <menuitem
+            id="child_laporan_laundry_id"
+            name="Laporan"
+            sequence="10"
+            parent="laundry_bagoes.parent_bagoes_laundry_id"
+            action="laundry_bagoes.laporan_laundry_actions_id"/>
+
+<!--        <menuitem-->
+<!--                id="child_pengaturan_laundry_id"-->
+<!--                name="Pengaturan"-->
+<!--                parent="laundry_bagoes.parent_bagoes_laundry_id"-->
+<!--                sequence="15"/>-->
+<!--        <menuitem-->
+<!--                id="child_password_pengaturan_laundry_id"-->
+<!--                name="Ganti Password"-->
+<!--                parent="laundry_bagoes.child_pengaturan_laundry_id"-->
+<!--                action="laundry_bagoes.password_laundry_actions_id"-->
+<!--                sequence="25"/>-->
+</odoo>
